@@ -11,6 +11,7 @@ This tutorial implements a linear SVM classifier for image classification on the
 CIFAR-10 contains 60,000 32×32 color images in 10 classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck.
 
 <img width="1402" height="559" alt="image" src="https://github.com/user-attachments/assets/44001692-72c2-4d1a-9c29-458bce4d13b7" />
+<img width="1037" height="826" alt="image" src="https://github.com/user-attachments/assets/68d645dd-72b2-4638-949e-451bb8f99cae" />
 
 *Sample images from CIFAR-10 dataset showing different classes*
 
@@ -20,8 +21,6 @@ After training a linear SVM on 5,000 training samples for 1,500 iterations:
 
 - **Training Accuracy: 41.24%**
 - **Test Accuracy: 34.80%**
-
-<img width="1037" height="826" alt="image" src="https://github.com/user-attachments/assets/68d645dd-72b2-4638-949e-451bb8f99cae" />
 
 *Loss curve showing convergence during training*
 
