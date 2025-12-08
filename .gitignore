@@ -1,21 +1,21 @@
-# 데이터 파일 제외 (용량이 크니까 GitHub에 안 올림)
+﻿# Dataset files (too large for GitHub)
 data/
 
-# Python 캐시 파일
+# Python cache files
 *.pyc
 __pycache__/
 *.pyo
 *.pyd
 
-# 가상환경
+# Virtual environment
 venv/
 env/
 ENV/
 
-# IDE 설정
+# IDE settings
 .vscode/
 .idea/
 
-# 학습된 모델 파일 (나중에 추가될 수 있음)
+# Model files (optional)
 *.npy
 *.pkl
