@@ -39,14 +39,13 @@ After training a linear SVM on 5,000 training samples for 1,500 iterations:
 2. **step1_repeat_training.py** - Training loop over 10 epochs
 3. **step2_load_cifar10.py** - Download and preprocess CIFAR-10
 4. **step2_visualize.py** - Visualize CIFAR-10 images
-5. **step3_svm_loss.py** - Vectorized SVM loss function (CS231n style)
+5. **step3_svm_loss.py** - Vectorized SVM loss function 
 6. **step4_train_cifar10.py** - Full training on real data
 
 ## Key Features
 
 - ✅ Pure NumPy implementation (no PyTorch/TensorFlow for training)
 - ✅ Vectorized operations for efficiency
-- ✅ CS231n style: `svm_loss(X, y, W, reg)`
 - ✅ Stochastic Gradient Descent with mini-batches
 - ✅ L2 regularization to prevent overfitting
 
