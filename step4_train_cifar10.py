@@ -17,15 +17,15 @@ class LinearSVM:
             self.W = 0.001 * np.random.randn(dim, num_classes)
         
         loss_history = []
-        
-        for it in range(num_iters):
-            batch_indices = np.random.choice(num_train, batch_size, replace=False)
+        ## SGD mini batch
+        for it in range(num_iters):  # how many times / max number per each attempt
+            batch_indices = np.random.choice(num_train, batch_size, replace=False) # no replace, number per attempt 
             X_batch = X[batch_indices]
             y_batch = y[batch_indices]
             
-            loss, grad = svm_loss(X_batch, y_batch, self.W, reg)
+            loss, grad = svm_loss(X_batch, y_batch, self.W, reg) # find loss, gradient 
             loss_history.append(loss)
-            self.W -= learning_rate * grad
+            self.W -= learning_rate * grad # gradient descent essential point.
             
             if verbose and it % 100 == 0:
                 print(f'Iteration {it}/{num_iters}: loss {loss:.4f}')
