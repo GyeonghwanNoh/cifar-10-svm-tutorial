@@ -18,16 +18,16 @@ def svm_loss(X, y, W, reg=0.0):
     """
     num_train = X.shape[0]
     
-    # Compute margins
+    # Compute margins (hinge loss)
     scores = X.dot(W)
-    correct_scores = scores[np.arange(num_train), y].reshape(-1, 1)
+    correct_scores = scores[np.arange(num_train), y].reshape(-1, 1)  # Extract correct class scores
     margins = np.maximum(0, scores - correct_scores + 1.0)
-    margins[np.arange(num_train), y] = 0
+    margins[np.arange(num_train), y] = 0  # Exclude correct class from loss
     
-    # Loss
-    loss = np.sum(margins) / num_train + reg * np.sum(W * W)
+    # Loss computation: data loss + regularization loss
+    loss = np.sum(margins) / num_train + reg * np.sum(W * W)  # L2 regularization
     
-    # Gradient
+    # Gradient computation
     binary = (margins > 0).astype(float)
     binary[np.arange(num_train), y] = -np.sum(binary, axis=1)
     dW = X.T.dot(binary) / num_train + 2 * reg * W
@@ -64,5 +64,5 @@ if __name__ == '__main__':
     print(f"Regularization adds: {loss_reg - loss:.4f}")
     
     print("\n" + "=" * 60)
-    print("✅ SVM loss function ready!")
+    print("SVM loss function validated successfully!")
     print("=" * 60)
